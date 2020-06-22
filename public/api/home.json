@@ -1,0 +1,50 @@
+{
+  "success": true, 
+  "result": {
+      "topicList": [
+          {
+              "id": 1, 
+              "title": "社会热点", 
+              "imgUrl": "//upload.jianshu.io/admin_banners/web_images/4980/b3ecc0ffbfbe8e6e73295a9207bd7a95aa4dc938.png?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+          }, 
+          {
+              "id": 2, 
+              "title": "社会热点2", 
+              "imgUrl": "//upload.jianshu.io/admin_banners/web_images/4980/b3ecc0ffbfbe8e6e73295a9207bd7a95aa4dc938.png?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+          }, 
+          {
+              "id": 3, 
+              "title": "社会热点3", 
+              "imgUrl": "//upload.jianshu.io/admin_banners/web_images/4980/b3ecc0ffbfbe8e6e73295a9207bd7a95aa4dc938.png?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+          }
+      ], 
+      "articleList": [
+          {
+              "id": 1, 
+              "title": "这个世界最可怜的，就是无趣的人 1", 
+              "desc": "我对你的世界没兴趣，也不想让你走进我的世界。 ——无趣的人 我是个极其无趣的人，思想比庙里的和尚都单纯。...", 
+              "imgUrl": "//upload-images.jianshu.io/upload_images/7289752-e2c35279dddf7fe9.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+          }, 
+          {
+              "id": 2, 
+              "title": "这个世界最可怜的，就是无趣的人 2", 
+              "desc": "我对你的世界没兴趣，也不想让你走进我的世界。 ——无趣的人 我是个极其无趣的人，思想比庙里的和尚都单纯。...", 
+              "imgUrl": "//upload-images.jianshu.io/upload_images/7289752-e2c35279dddf7fe9.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+          }
+      ], 
+      "recommondList": [
+          {
+              "id": 1, 
+              "imgUrl": "red"
+          }, 
+          {
+              "id": 2, 
+              "imgUrl": "yellow"
+          }, 
+          {
+              "id": 3, 
+              "imgUrl": "black"
+          }
+      ]
+  }
+}
