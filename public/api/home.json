@@ -14,7 +14,7 @@
           }, 
           {
               "id": 3, 
-              "title": "社会热点3", 
+              "title": "冒名顶替上大学", 
               "imgUrl": "//upload.jianshu.io/admin_banners/web_images/4980/b3ecc0ffbfbe8e6e73295a9207bd7a95aa4dc938.png?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
           }
       ], 
@@ -43,7 +43,7 @@
           }, 
           {
               "id": 3, 
-              "imgUrl": "black"
+              "imgUrl": "grey"
           }
       ]
   }
