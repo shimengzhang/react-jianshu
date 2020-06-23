@@ -14,7 +14,7 @@ let isFirstFocus = true;
 class Header extends PureComponent {
   render() {
     const {
-      focused, handleSearchBlur, handleSearchFocus,
+      focused, handleSearchBlur, handleSearchFocus, login, logout,
     } = this.props;
     return (
       <HeaderWrapper>
@@ -22,7 +22,11 @@ class Header extends PureComponent {
         <Nav>
           <NavItem className="left active">首页</NavItem>
           <NavItem className="left">下载App</NavItem>
-          <NavItem className="right">登录</NavItem>
+          {
+            login
+              ? <NavItem onClick={logout} className='right'>退出</NavItem>
+              : <Link to='/login'><NavItem className='right'>登陆</NavItem></Link>
+          }
           <NavItem className="right"><span className="iconfont">&#xe636;</span></NavItem>
           <SearchWrapper>
             <CSSTransition
@@ -65,7 +69,6 @@ class Header extends PureComponent {
               换一批
             </SearchInfoSwitch>
           </SearchInfoTitle>
-          <SearchInfoList>
             {this.getSearchInfoItem()}
           </SearchInfoList>
         </SearchInfo>

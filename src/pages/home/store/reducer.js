@@ -1,38 +1,38 @@
 import { fromJS } from 'immutable';
-import * as actionTypes from './actionTypes';
+import * as constants from './constants';
 
 const defaultState = fromJS({
-  topicList: [],
-  articleList: [],
-  recommondList: [],
-  articlePage: 1,
-  showScroll: false,
+	topicList: [],
+	articleList: [],
+	recommendList: [],
+	articlePage: 1,
+	showScroll: false
 });
 
-const changeList = (state, action) => (
-  state.merge({
-    topicList: fromJS(action.value.topicList),
-    articleList: fromJS(action.value.articleList),
-    recommondList: fromJS(action.value.recommondList),
-  })
-);
+const changeHomeData = (state, action) => {
+	return state.merge({
+		topicList: fromJS(action.topicList),
+		articleList: fromJS(action.articleList),
+		recommendList: fromJS(action.recommendList)
+	});
+};
 
-const changeArticleList = (state, action) => (
-  state.merge({
-    articleList: state.get('articleList').concat(fromJS(action.value)),
-    articlePage: action.nextPage,
-  })
-);
+const addArticleList = (state, action) => {
+	return state.merge({
+		'articleList': state.get('articleList').concat(action.list),
+		'articlePage': action.nextPage
+	});
+};
 
 export default (state = defaultState, action) => {
-  switch (action.type) {
-    case actionTypes.CHANGE_LIST:
-      return changeList(state, action);
-    case actionTypes.CHANGE_ARTICLE_LIST:
-      return changeArticleList(state, action);
-    case actionTypes.CHANGE_TOP_SHOW:
-      return state.set('showScroll', action.value);
-    default:
-      return state;
-  }
-};
+	switch(action.type) {
+		case constants.CHANGE_HOME_DATA:
+			return changeHomeData(state, action);
+		case constants.ADD_ARTICLE_LIST:
+			return addArticleList(state, action);
+		case constants.TOGGLE_SCROLL_TOP:
+			return state.set('showScroll', action.show);
+		default:
+			return state;
+	}
+}
