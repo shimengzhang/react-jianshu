@@ -1,16 +1,16 @@
 import axios from 'axios';
 import { fromJS } from 'immutable';
-import * as constants from './constants';
+import * as actionTypes from './actionTypes';
 
 const changHomeData = (result) => ({
-  type: constants.CHANGE_HOME_DATA,
+  type: actionTypes.CHANGE_HOME_DATA,
   topicList: result.topicList,
   articleList: result.articleList,
   recommendList: result.recommendList,
 });
 
 const addHomeList = (list, nextPage) => ({
-  type: constants.ADD_ARTICLE_LIST,
+  type: actionTypes.ADD_ARTICLE_LIST,
   list: fromJS(list),
   nextPage,
 });
@@ -30,6 +30,6 @@ export const getMoreList = (page) => (dispatch) => {
 };
 
 export const toggleTopShow = (show) => ({
-  type: constants.TOGGLE_SCROLL_TOP,
+  type: actionTypes.TOGGLE_SCROLL_TOP,
   show,
 });
